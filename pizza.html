@@ -1,0 +1,377 @@
+<style>
+	#pizza{
+		width:100px;
+		height:100px;
+		background-color:#ffe1b2;
+		-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+		border-radius:50%;
+		position:absolute;
+	}
+	#sauce{
+		width:92px;
+		height:92px;
+		background-color:#ff4b0a;
+		-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+		border-radius:50%;
+		position:relative;
+		top:4px;
+		margin-left:4px;
+	}
+	#cheeze{
+		width:90px;
+		height:90px;
+		background-color:#fff8e2;
+		-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+		border-radius:50%;
+		position:relative;
+		top:1px;
+		margin-left:1px;
+	}
+	.slice{
+		width:100px;
+		height:1px;
+		background-color:#ffb078;
+		position:relative;
+		top:45px;
+		margin-left:-4px;
+	}
+	.slice:nth-child(2){
+		-webkit-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-ms-transform:rotate(90deg);
+		transform:rotate(90deg);
+	}
+	.slice:nth-child(3){
+		margin-top: -3px;
+		-webkit-transform:rotate(135deg);
+		-moz-transform:rotate(135deg);
+		-ms-transform:rotate(135deg);
+		transform:rotate(135deg);
+	}
+	.slice:nth-child(4){
+		-webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		transform:rotate(45deg);
+	}
+	.pepperoni{
+		width:10px;
+		height:10px;
+		position:absolute;
+		background-color:c63c15;
+		-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+		border-radius:50%;
+	}
+	.pepperoni:nth-child(5){
+		margin-top:10px;
+		margin-left:50px;
+	}
+	.pepperoni:nth-child(6){
+		margin-top:22px;
+		margin-left:33px;
+	}
+	.pepperoni:nth-child(7){
+		margin-top:32px;
+		margin-left:56px;
+	}
+	.pepperoni:nth-child(8){
+		margin-top:46px;
+		margin-left:12px;
+	}
+	.pepperoni:nth-child(9){
+		margin-top:12px;
+		margin-left:13px;
+	}
+	.pepperoni:nth-child(10){
+		margin-top:67px;
+		margin-left:35px;
+	}
+	.pepperoni:nth-child(11){
+		margin-top:72px;
+		margin-left:18px;
+	}
+	.pepperoni:nth-child(12){
+		margin-top:51px;
+		margin-left:49px;
+	}
+	.pepperoni:nth-child(13){	
+		margin-top:74px;
+		margin-left:54px;
+	}
+	.pepperoni:nth-child(14){
+		margin-top:57px;
+		margin-left:71px;
+	}
+	.pepper{
+		width:5px;
+		height:2px;
+		background-color:#42700E;
+		position:absolute;
+	}
+	.pepper:nth-child(15){
+		margin-left:32px;
+		margin-top:5px;
+		-webkit-transform:rotate(10deg);
+		-moz-transform:rotate(10deg);
+		-ms-transform:rotate(10deg);
+		transform:rotate(10deg);
+	}
+	.pepper:nth-child(16){
+		margin-left:14px;
+		margin-top:27px;
+		-webkit-transform:rotate(-10deg);
+		-moz-transform:rotate(-10deg);
+		-ms-transform:rotate(-10deg);
+		transform:rotate(-10deg);
+	}
+	.pepper:nth-child(17){
+		margin-left:51px;
+		margin-top:25px;
+		-webkit-transform:rotate(4deg);
+		-moz-transform:rotate(4deg);
+		-ms-transform:rotate(4deg);
+		transform:rotate(4deg);
+	}
+	.pepper:nth-child(18){
+		margin-left:78px;
+		margin-top:36px;
+		transform:rotate(78deg);
+	}
+	.pepper:nth-child(19){
+		margin-left:33px;
+		margin-top:47px;
+		-webkit-transform:rotate(6deg);
+		-moz-transform:rotate(6deg);
+		-ms-transform:rotate(6deg);
+		transform:rotate(6deg);
+	}
+	.pepper:nth-child(20){
+		margin-left:37px;
+		margin-top:82px;
+		-webkit-transform:rotate(-6deg);
+		-moz-transform:rotate(-6deg);
+		-ms-transform:rotate(-6deg);
+		transform:rotate(-6deg);
+	}
+	.pepper:nth-child(21){
+		margin-left:56px;
+		margin-top:67px;
+		-webkit-transform:rotate(10deg);
+		-moz-transform:rotate(10deg);
+		-ms-transform:rotate(10deg);
+		transform:rotate(10deg);
+	}
+	.pepper:nth-child(22){
+		margin-left:66px;
+		margin-top:47px;
+		-webkit-transform:rotate(-12deg);
+		-moz-transform:rotate(-12deg);
+		-ms-transform:rotate(-12deg);
+		transform:rotate(-12deg);
+	}
+	.mushroom{
+		position:absolute;
+	}
+	.mushTop{
+		width:10px;
+		height:5px;
+		background-color:#c6c0af;
+		-webkit-border-top-right-radius:50%;
+		-moz-border-top-right-radius:50%;
+		border-top-right-radius:50%;
+		-webkit-border-top-left-radius:50%;
+		-moz-border-top-left-radius:50%;
+		border-top-left-radius:50%;
+	}
+	.mushStem{
+		width:4px;
+		height:4px;
+		margin-left:3px;
+		background-color:#c6c0af;
+	}
+	.mushroom:nth-child(23){
+		margin-left:28px;
+		margin-top:11px;
+		-webkit-transform:rotate(-17deg);
+		-moz-transform:rotate(-17deg);
+		-ms-transform:rotate(-17deg);
+		transform:rotate(-17deg);
+	}
+	.mushroom:nth-child(24){
+		margin-left:26px;
+		margin-top:34px;
+		-webkit-transform:rotate(10deg);
+		-moz-transform:rotate(10deg);
+		-ms-transform:rotate(10deg);
+		transform:rotate(10deg);
+	}
+	.mushroom:nth-child(25){
+		margin-left:57px;
+		margin-top:5px;
+	}
+	.mushroom:nth-child(26){
+		margin-left:72px;
+		margin-top:20px;
+		-webkit-transform:rotate(22deg);
+		-moz-transform:rotate(22deg);
+		-ms-transform:rotate(22deg);
+		transform:rotate(22deg);
+	}
+	.mushroom:nth-child(27){
+		margin-left:10px;
+		margin-top:58px;
+	}
+	.mushroom:nth-child(28){
+		margin-left:31px;
+		margin-top:58px;
+		-webkit-transform:rotate(-16deg);
+		-moz-transform:rotate(-16deg);
+		-ms-transform:rotate(-16deg);
+		transform:rotate(-16deg);
+	}
+	.mushroom:nth-child(29){
+		margin-left:64px;
+		margin-top:72px;
+		-webkit-transform:rotate(16deg);
+		-moz-transform:rotate(16deg);
+		-ms-transform:rotate(16deg);
+		transform:rotate(16deg);
+	}
+	.mushroom:nth-child(30){
+		margin-left:78px;
+		margin-top:47px;
+		-webkit-transform:rotate(-27deg);
+		-moz-transform:rotate(-27deg);
+		-ms-transform:rotate(-27deg);
+		transform:rotate(-27deg);
+	}
+	.olive{
+		position:absolute;
+		width:1px;
+		height:1px;
+		-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+		border-radius:50%;
+		-webkit-box-shadow: 0 0 0 2px rgba(0,0,0.8);
+		-moz-box-shadow: 0 0 0 2px rgba(0,0,0,.8);
+		box-shadow: 0 0 0 2px rgba(0,0,0,.8);
+	}
+	.olive:nth-child(31){
+		margin-left:10px;
+		margin-top:32px;
+	}
+	.olive:nth-child(32){
+		margin-left:19px;
+		margin-top:35px;
+	}
+	.olive:nth-child(33){
+		margin-left:26px;
+		margin-top:9px;
+	}
+	.olive:nth-child(34){
+		margin-left:63px;
+		margin-top:19px;
+	}
+	.olive:nth-child(35){
+		margin-left:72px;
+		margin-top:35px;
+	}
+	.olive:nth-child(36){
+		margin-left:8px;
+		margin-top:52px;
+	}
+	.olive:nth-child(37){
+		margin-left:27px;
+		margin-top:54px;
+	}
+	.olive:nth-child(38){
+		margin-left:42px;
+		margin-top:51px;
+	}
+	.olive:nth-child(39){
+		margin-left:26px;
+		margin-top:67px;
+	}
+	.olive:nth-child(40){
+		margin-left:50px;
+		margin-top:69px;
+	}
+	.olive:nth-child(41){
+		margin-left:67px;
+		margin-top:58px;
+	}
+</style>
+<div id="pizza">
+	<div id="sauce">
+		<div id="cheeze">
+			<div class="slice"></div>
+			<div class="slice"></div>
+			<div class="slice"></div>
+			<div class="slice"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepperoni"></div>
+			<div class="pepper"></div>
+			<div class="pepper"></div>
+			<div class="pepper"></div>
+			<div class="pepper"></div>
+			<div class="pepper"></div>
+			<div class="pepper"></div>
+			<div class="pepper"></div>
+			<div class="pepper"></div>
+			<div class="mushroom">
+				<div class="mushTop"></div>
+				<div class="mushStem"></div>
+			</div>
+			<div class="mushroom">
+				<div class="mushTop"></div>
+				<div class="mushStem"></div>
+			</div>
+			<div class="mushroom">
+				<div class="mushTop"></div>
+				<div class="mushStem"></div>
+			</div>
+			<div class="mushroom">
+				<div class="mushTop"></div>
+				<div class="mushStem"></div>
+			</div>
+			<div class="mushroom">
+				<div class="mushTop"></div>
+				<div class="mushStem"></div>
+			</div>
+			<div class="mushroom">
+				<div class="mushTop"></div>
+				<div class="mushStem"></div>
+			</div>
+			<div class="mushroom">
+				<div class="mushTop"></div>
+				<div class="mushStem"></div>
+			</div>
+			<div class="mushroom">
+				<div class="mushTop"></div>
+				<div class="mushStem"></div>
+			</div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+			<div class="olive"></div>
+	</div>
+</div>
